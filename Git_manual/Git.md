@@ -1,61 +1,85 @@
 
 ## Git
-Git è un version control system.
-Vediamo come funzione
+Git è un version control system, uno strumento che aiuta a gestire i cambiamenti nel codice sorgente nel tempo
+### Le funzionalità principali di un VCS
+
+* Cronologia completa delle modifiche di un file (creazione, cancellazione, modifica, spostamento e cancellazione). Ognuna di queste è accompagnata da ulteriori informazioni come autore, data e note sulla modifica.
+* Possibilità di divergere e lavorare in flussi di modifiche isolati, chiamati rami.<br> Questa funzionalità è nota come branching o ramificazione.
+* I flussi isolati possono essere riunificati in qualsiasi momento al flusso principale. Questo si chiama merging o unificazione.
+* Verifica e segnalazione preventiva dei conflitti così da evitare di portare dei malfunzionamenti inattesi nel flusso principale.
+* Nel caso di errore si può “tornare indietro” ad una versione precedente, correggendo l’errore ed evitando malfunzionamenti prolungati.
+
+### I VCS
+Esistono tre tipologie di VCS: 
+* locali
+
+![alt text](../Images/LVCS.PNG)
+
+* centralizzati
+
+![alt text](../Images/CVCS.PNG)
+
+* distribuiti
+
+![alt text](../Images/DVCS.PNG)
+
+
+## Come funziona un VCS
 
 I vecchi VCS salvano l’informazione come una lista di modifiche ai file.
 
-![alt text](VCS.JPG) 
+![alt text](../Images/VCS.JPG)
 
-Git considera i propri dati più come una sequenza di istantanee (snapshot) di un mini filesystem.<br> Con Git, ogni volta che registri /(commit) fai un’immagine di tutti i file tracciati presenti nella repo in quel momento, salvando un riferimento allo snapshot con hash SHA1 + checksum di controllo integrità dei file.
+I DVCS come Git considerano i propri dati più come una sequenza di istantanee (snapshot).
 
-![alt text](Git.PNG)
+![alt text](../Images/Git.PNG)
+
+Con Git, ogni volta che registri, fai un commit, crei un’immagine di tutti i file tracciati presenti nella repo in quel momento, salvando un riferimento allo snapshot con hash SHA1 + checksum di controllo integrità dei file.
 
 ## SHA 1 e checksum dei commit 
+
 Qualsiasi cosa in Git è controllata.<br> Il meccanismo che Git usa per fare il commit è una hash SHA-1. Si tratta di una stringa di 40-caratteri, composta da caratteri esadecimali (0–9 ed a–f) e calcolata in base al contenuto dei file o della struttura della directory in Git.<br> Un hash SHA-1 assomiglia a qualcosa come:<br>
 ***24b9da6552252987aa493b52f8696cd6d3b00373***<br>
 
 L'hash contiene un checksum. Questo significa che è impossibile cambiare il contenuto di qualsiasi file o directory senza che Git lo sappia.
 
-## I tre stati di Git 
+### Le aree di lavoro di Git
 
-I file in Git possono essere in tre stati principali: 
-* Modified, modificato significa che il file è stato modificato, ma non è ancora stato committato nel database. 
-* In stage significa che hai contrassegnato un file, modificato nella versione corrente, perché venga inserito nello snapshot alla prossima commit. 
-* Committed, committato significa che il file è registrato al sicuro nel database locale.
+Le aree di Git sono tre e sono:
+
+1. La Working Directory dove risiede il codice sorgente nella sua versione più recente. Corrisponde alla cartella nel nostro computer, quella che apriamo nel nostro editor per lavorare.
+
+2. La Staging Area, area fittizia, non esiste veramente, qui è dove i file vengono contrassegnati per essere inclusi nella commit successiva.
+
+3. La Git Directory, lo spazio, nel database dove i file vengono salvati e custoditi.
+
+### Gli stati dei file
+
+I file del nostro progetto possono cambiare di stato.<br> Git infatti ce li contrassegnerà in modo differente in base a delle specifiche situazioni, come:
+
+* Senza traccia (Untracked): il file è presente nella directory di lavoro, ma non è stato mai oggetti di commit o inserito in staging area.
+* Senza storia (Staged): il file è stato aggiunto per la prima volta alla staging area, questo fa sì che Git gli assegni un indice.
+* Modificato (Modified): Il file è stato precedentemente salvato nella git directory e ciò che è presente nella working directory non corrisponde.
+* Committed: Il file è stato salvato nella git directory e quello presente in working directory è identico.
 
 
-## Le tre sezioni di un progetto
+### Il workflow di base in Git
 
+1. Modifica dei file nella Working Directory
+2. Contrassegna dei file da includere nella successiva commit, inserendoli nella Staging Area
+3. Commit dei file presenti  nell’area di stage.
 
-1. La Git directory conosciuta come Repository
-2. La staging area 
-3. La working directory o albero di lavoro
 
 ![alt text](../Images/I_tre_stati_di_Git.PNG)
 
-I file vengono estratti dal repository \(database compresso nella directory Git) e posizionati sul disco, la nostra directory di lavoro per essere utilizzati o modificati.
-
-L'area di staging non è un'area ma un file che memorizza le informazioni su ciò che verrà inserito nel prossimo commit.<br>
-Il file si trova nella directory Git.
-
-## Il flusso di lavoro di Git
-
-* Crea e/o modifica i file nella working directory.
-
-* seleziona le modificha che vuoi inserire nel prossimo commit e con il comando git add posizionale nella Stage area.
-
-* esegui un commit, un istantanea o snapshot che, in base alle istruzioni della stage area memorizza lo snapshot nella .git directory della Repo.
 
 [Git Basics Getting a Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter)
 
 
-
-### La riga di comando
-Ci sono molti modi diversi di usare Git. C’è la linea di comando originale e ci sono molte interfacce grafiche ciascuna con le proprie capacità. La riga di comando è l’unico posto dove puoi eseguire tutti i comandi di Git
-
-
 ## Prima configurazione di Git
+
+Ci sono molti modi diversi di usare Git.
+***La riga di comando è l’unico posto dove puoi eseguire tutti i comandi di Git.***<br>
 
 Git viene fornito con uno strumento chiamato ***git config*** che ti consente di ottenere e impostare variabili di configurazione che controllano tutti gli aspetti e il funzionamento di Git
 

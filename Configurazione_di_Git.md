@@ -4,14 +4,14 @@
 
 ## Prima configurazione di Git
 
-Ci sono molti modi diversi di usare Git.
+Ci sono molti modi diversi di usare Git.<br>
 ***La riga di comando è l’unico posto dove puoi eseguire tutti i comandi di Git.***<br>
 
-Git viene fornito con uno strumento chiamato ***git config*** che ti consente di ottenere e impostare variabili di configurazione che controllano tutti gli aspetti e il funzionamento di Git
-
+Git viene fornito con uno strumento chiamato ***git config*** che ti consente di ottenere e impostare variabili di configurazione che controllano tutti gli aspetti e il funzionamento di Git.
 Puoi visualizzare tutte le tue impostazioni e la loro provenienza utilizzando:
 
 *$ git config --list --show-origin*
+
 #### Impostare il nome utente e indirizzo email. 
 
 *$ git config --global user.name "John Doe"*
@@ -50,6 +50,7 @@ Mentre per visualizzare il valore di una singola variabile
 
 ![alt text](Images/1.PNG)
 
+
 main indica che la directory Repo è stata inizializzata e siamo sul ramo main
 Inizializzando, abbiamo creato una cartella .git apriamola:
 
@@ -75,25 +76,31 @@ description<br>
 
 ![alt text](Images/2.PNG)
 
+
 * Comando echo alternativo
+
 ![alt text](Images/2.1.JPG)
 
 * altro comando interessante alias:<br> registro un comando con un unica parola graph
+
 ![alt text](Images/1.1.JPG)
+
  
  * controllo lo stato della Repo 
 
  ![alt text](Images/3.PNG)
-.....
+
 
 
 * aggiungo i file alla staging area
 
 ![alt text](Images/4.PNG)
 
+
 * eseguo la prima commit /snapshot della mia Repo
 
 ![alt text](Images/5.PNG)
+
 
 Git possiamo immaginarlo come una linea del tempo dove le commit sono le date importanti da ricordare. La commit cattura lo stato del progetto in un preciso punto nel tempo.<br>
 Il concetto di snapshot è importantissimo per Git, perché influenza ogni suo processo.

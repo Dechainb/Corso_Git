@@ -18,26 +18,26 @@ Diventa quindi un ottimo strumento per chi sviluppa software ma anche per chi vu
 Esistono tre tipologie di VCS: 
 * locali
 
-![alt text](../Images/LVCS.PNG)
+![alt text](Images/LVCS.PNG)
 
-* centralizzati
+* Centralizzati
 
-![alt text](../Images/CVCS.PNG)
+![alt text](Images/CVCS.PNG)
 
 * distribuiti
 
-![alt text](../Images/DVCS.PNG)
 
+![alt text](Images/DVCS.PNG)
 
 ## Come funziona un VCS
 
 I vecchi VCS salvano l’informazione come una lista di modifiche ai file.
 
-![alt text](../Images/VCS.JPG)
+![alt text](Images/VCS.JPG)
 
 I DVCS come Git considerano i propri dati più come una sequenza di istantanee (snapshot).
 
-![alt text](../Images/Git.PNG)
+![alt text](Images/Git.PNG)
 
 Con Git, ogni volta che registri, fai un commit, crei un’immagine di tutti i file tracciati presenti nella repo in quel momento, salvando un riferimento allo snapshot con hash SHA1 + checksum di controllo integrità dei file.
 
@@ -74,6 +74,4 @@ I file del nostro progetto possono cambiare di stato.<br> Git infatti ce li cont
 2. Contrassegna dei file da includere nella successiva commit, inserendoli nella Staging Area
 3. Commit dei file presenti  nell’area di stage.
 
-
-![alt text](../Images/I_tre_stati_di_Git.PNG)
-
+![alt text](Images/I_tre_stati_di_Git.PNG)

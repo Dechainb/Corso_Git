@@ -2,9 +2,7 @@
 ## Git
 
 ### Abstract
-GitHub è un Social Network con una sua caratteristica che lo distingue dagli altri: il controllo di versione.
-Permette agli utenti di condividere file tenendo traccia delle versioni  e relative modifiche pubblicate.
-Diventa quindi un ottimo strumento per chi sviluppa software ma anche per chi vuole condividere un documento di testo.
+VCS o controllo di versione, un sistema che registra, nel tempo, i cambiamenti d un file o serier di file, cosi da poter richiamare una specifica versione in un secondo momento.
 
 ### Le funzionalità principali di un VCS
 
@@ -62,10 +60,10 @@ Le aree di Git sono tre e sono:
 
 I file del nostro progetto possono cambiare di stato.<br> Git infatti ce li contrassegnerà in modo differente in base a delle specifiche situazioni, come:
 
-* Senza traccia (Untracked): il file è presente nella directory di lavoro, ma non è stato mai oggetti di commit o inserito in staging area.
-* Senza storia (Staged): il file è stato aggiunto per la prima volta alla staging area, questo fa sì che Git gli assegni un indice.
-* Modificato (Modified): Il file è stato precedentemente salvato nella git directory e ciò che è presente nella working directory non corrisponde.
-* Committed: Il file è stato salvato nella git directory e quello presente in working directory è identico.
+1) Senza traccia (Untracked): il file è presente nella directory di lavoro, ma non è stato mai oggetti di commit o inserito in staging area.
+2)  Senza storia (Staged): il file è stato aggiunto per la prima volta alla staging area, questo fa sì che Git gli assegni un indice.
+3)  Modificato (Modified): Il file è stato precedentemente salvato nella git directory e ciò che è presente nella working directory non corrisponde.
+4)  Committed: Il file è stato salvato nella git directory e quello presente in working directory è identico.
 
 
 ### Il workflow di base in Git

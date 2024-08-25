@@ -75,6 +75,7 @@ f73e7a0 first commit<br>
 7af9d9b (HEAD -> main) second Commit
 
 ### approfondimento posizione commit
+
 (HEAD -> main)<br>
 HEAD è il puntatore che indica la posizione del commit. Posso entrare nella crtella heads per vederlo<br>
 ***cat .git/HEAD***
@@ -92,6 +93,27 @@ HEAD è il puntatore che indica la posizione del commit. Posso entrare nella crt
 Comandi utili per puntare al commit che mi interessa: o scrivo id o digito
 git reset --soft HEAD^  ogni accento circonflesso mi indica di quante commit torno indietro.<br>
 Consiglio utile: prima digito git log --oneline cosi vedo i commit e a quale mi interessa puntare.
+
+## caricare Repository su github
+
+1) Creo la mia repo su Github e ne copio Url
+
+2) ***git remote add origin https://github.com/..................<br> "origin è il nome che do al mio server"
+
+3) git push -u origin main
+
+Approfondimento: git remote
+
+***git remote -v***<br> ottengo il nome dei server registrati e url
+***cat .git/config*** apro file di configurazione server
+
+***git remote show [nome server]***<br> mi da il dettagloio servergit remote rename origin<br>
+***git remote rename [ nome server]  [nuovo nome]***<br>
+***git remote remove [nome server]
+
+
+
+
 
 
 

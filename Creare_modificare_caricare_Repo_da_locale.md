@@ -111,9 +111,29 @@ Approfondimento: git remote
 ***git remote rename [ nome server]  [nuovo nome]***<br>
 ***git remote remove [nome server]
 
+Sincronizzare.
+***git push [nome server] main*** invia i commit dal ramo main del repository locale al ramo remoto
+
+***git pull [nome server] main*** invia i commit dal ramo main del repository in remoto al ramo locale
 
 
+## Creare Repository da VSCode
+Creo il mio repo quickstep su github cosi ottengo indirizzo https
+mkdir [nome directory]
+cd [nome directory]
+echo "# Site" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Dechainb/[nome Repository].git
+git push -u origin main
 
+
+or push an existing repository from the command line
+git remote add origin https://github.com/Dechainb/DechainLabs.git
+git branch -M main
+git push -u origin main
 
 
 
